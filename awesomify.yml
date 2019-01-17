@@ -5,7 +5,7 @@ functions:
   awesomify:
     lang: dockerfile
     handler: ./awesomify
-    image: diddledan/awesomify:latest
+    image: diddledan/awesomify:0.1
     environment:
       read_timeout: 10s
       write_timeout: 10s

@@ -11,6 +11,8 @@ if [ -z "$NAME" ]; then
     done
 fi
 
+NAME="$(echo "$NAME" | sed -E -e 's/^.*[&;]?q=([^&;]+)([;&].*)?$/\1/')"
+
 [ -n "$NAME" ] && NAME="$(urldecode "$NAME")"
 
 if [ -z "$NAME" ]; then
