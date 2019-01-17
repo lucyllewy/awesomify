@@ -6,3 +6,8 @@ functions:
     lang: dockerfile
     handler: ./awesomify
     image: diddledan/awesomify:latest
+    environment:
+      read_timeout: 10s
+      write_timeout: 10s
+      content_type: audio/ogg
+
