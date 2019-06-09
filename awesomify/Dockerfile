@@ -1,4 +1,4 @@
-FROM alpine:3.8 as mimic-build
+FROM alpine:3.9 as mimic-build
 
 RUN apk --no-cache add curl \
     && curl -sSL -o /tmp/mimic.tar.gz https://github.com/MycroftAI/mimic/archive/1.2.0.2.tar.gz
@@ -13,7 +13,7 @@ RUN apk --no-cache add icu-dev pcre2-dev autoconf automake libtool m4 make gcc g
     && make install
 
 
-FROM alpine:3.8
+FROM alpine:3.9
 
 WORKDIR /home/app
 
